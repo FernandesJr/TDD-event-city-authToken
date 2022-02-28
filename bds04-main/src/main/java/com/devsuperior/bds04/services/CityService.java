@@ -23,6 +23,7 @@ public class CityService {
         return list.stream().map(c -> new CityDTO(c)).collect(Collectors.toList());
     }
 
+    @Transactional
     public CityDTO insert(CityDTO dto) {
         City entity = new City();
         entity.setName(dto.getName());
